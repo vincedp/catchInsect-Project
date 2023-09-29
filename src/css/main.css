@@ -16,6 +16,10 @@ body {
   transform: translateY(-100%);
 }
 
+.move2 {
+  transform: translateY(-200%);
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -100,13 +104,20 @@ body {
   padding: 3rem 1.5rem;
 }
 .header__container--3 .notif {
+  opacity: 0;
   position: absolute;
   line-height: 18px;
   text-align: center;
   font-size: 18px;
   inset: 150px 0;
+  transform: translateY(-70%);
+  transition: all 0.5s ease-in-out;
 }
-.header__container--3 .notif .link {
+.header__container--3 .open {
+  transform: translateY(0%);
+  opacity: 1;
+}
+.header__container--3 .link {
   cursor: pointer;
   text-decoration: underline;
 }
