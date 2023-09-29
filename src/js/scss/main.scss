@@ -1,0 +1,125 @@
+@import "config";
+@import "colors";
+@import "functions";
+
+.header__container--1 {
+  @include flexDisplay(column);
+  height: 100vh;
+  gap: 20px;
+  transition: margin-top 1s ease;
+  .text-1 {
+    color: $light;
+  }
+
+  .play-btn {
+    border: none;
+    outline: none;
+    background-color: $light;
+    color: $bg-color;
+    width: 150px;
+    padding: 15px 5px;
+  }
+}
+
+.header__container--2 {
+  @include flexDisplay(column);
+  height: 100vh;
+  gap: 50px;
+  color: $light;
+  transition: margin-top 1s ease;
+
+  .insect-buttons {
+    display: flex;
+    column-gap: 20px;
+  }
+
+  .text-2 {
+    pointer-events: none;
+  }
+
+  .insect {
+    text-align: center;
+    border: 1px solid $light;
+    outline: none;
+    background-color: transparent;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: $light;
+  }
+
+  .insect:hover {
+    color: $bg-color;
+    background-color: $light;
+  }
+
+  .insect h4 {
+    color: currentColor;
+    font-weight: 500;
+  }
+  .insect img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+.header__container--3 {
+  height: 100vh;
+  color: $light;
+  position: relative;
+  transition: margin-top 1s ease;
+
+  .game-info {
+    @include flexDisplay();
+    justify-content: space-between;
+    padding: 3rem 1.5rem;
+  }
+
+  .notif {
+    opacity: 0;
+    position: absolute;
+    line-height: 18px;
+    text-align: center;
+    font-size: 18px;
+    inset: -100px 0;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .open {
+    inset: 150px 0;
+    opacity: 1;
+  }
+
+  .ins {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transform: translate(-50%, -50%) scale(1);
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease-out;
+  }
+
+  .caught {
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  .ins img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .link {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+.up {
+  margin-top: -100vh;
+}
