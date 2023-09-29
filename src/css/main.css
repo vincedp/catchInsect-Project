@@ -9,6 +9,11 @@
 body {
   height: 100vh;
   background-color: rgb(81, 109, 255);
+  transition: all 0.8s ease-in-out;
+}
+
+.move {
+  transform: translateY(-100%);
 }
 
 .header {
@@ -17,20 +22,19 @@ body {
   justify-content: center;
   align-items: center;
 }
-.header__container--1 {
+.header .header__container--1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
   height: 100vh;
   width: 100vw;
   gap: 20px;
 }
-.header__container--1 .text-1 {
+.header .header__container--1 .text-1 {
   color: white;
 }
-.header__container--1 .play-btn {
+.header .header__container--1 .play-btn {
   border: none;
   outline: none;
   background-color: white;
@@ -43,7 +47,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
   height: 100vh;
   width: 100vw;
   gap: 50px;
@@ -52,6 +55,9 @@ body {
 .header__container--2 .insect-buttons {
   display: flex;
   column-gap: 20px;
+}
+.header__container--2 .text-2 {
+  pointer-events: none;
 }
 .header__container--2 .insect {
   text-align: center;
@@ -77,6 +83,32 @@ body {
 .header__container--2 .insect img {
   width: 70px;
   height: 70px;
+}
+.header__container--3 {
+  height: 100vh;
+  width: 100vw;
+  border: 1px solid black;
+  color: white;
+  position: relative;
+}
+.header__container--3 .game-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 1.5rem;
+}
+.header__container--3 .notif {
+  position: absolute;
+  line-height: 18px;
+  text-align: center;
+  font-size: 18px;
+  inset: 150px 0;
+}
+.header__container--3 .notif .link {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=main.css.map */
